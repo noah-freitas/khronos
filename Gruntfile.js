@@ -11,7 +11,8 @@ module.exports = function (grunt) {
   // configurable paths
   var yeomanConfig = {
     app: 'app',
-    dist: 'dist'
+    dist: 'dist',
+    test: 'test'
   };
 
   try {
@@ -101,12 +102,9 @@ module.exports = function (grunt) {
         }
       },
       test: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/spec',
-          src: '*.coffee',
-          dest: 'test/spec'
-        }]
+        files: {
+          '.tmp/spec/coffee.js': '<%= yeoman.test %>/spec/**/*.coffee'
+        }
       }
     },
     compass: {
