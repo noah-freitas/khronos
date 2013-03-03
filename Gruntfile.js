@@ -244,7 +244,7 @@ module.exports = function (grunt) {
     'clean:server',
     'coffee',
     'compass',
-    'connect:test',
+    // 'connect:test', Causes an error on C9.io
     'testacular'
   ]);
 
@@ -252,9 +252,9 @@ module.exports = function (grunt) {
     'clean:dist',
     'jshint',
     'test',
-    'coffee',
-    'compass:dist',
-    'useminPrepare',
+    // 'coffee',  Already in grunt test
+    // 'compass:dist', Already in grunt test
+    // 'useminPrepare', Maybe causing errors.
     'imagemin',
     'cssmin',
     'htmlmin',
