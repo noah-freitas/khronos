@@ -47,9 +47,11 @@ autoWatch = false;
 // - Opera
 // - Safari
 // - PhantomJS
-hostname = process.env.IP;
-port = process.env.PORT;
-runnerPort = 0;
+browsers = ['PhantomJS'];
+
+// hostname = process.env.IP;
+// port = process.env.PORT;
+// runnerPort = 0;
 
 // Continuous Integration mode
 // if true, it capture browsers, run tests and exit

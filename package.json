@@ -26,6 +26,9 @@
     "grunt-ngmin": "~0.0.1"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=0.8"
+  },
+  "scripts": {
+    "test" : "grunt test --verbose"
   }
 }

@@ -244,7 +244,7 @@ module.exports = function (grunt) {
     'clean:server',
     'coffee',
     'compass',
-    // 'connect:test', Causes an error on C9.io
+    'connect:test',
     'testacular'
   ]);
 
