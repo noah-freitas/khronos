@@ -9,10 +9,6 @@ files = [
   JASMINE_ADAPTER,
   'app/components/angular/angular.js',
   'app/components/angular-mocks/angular-mocks.js',
-  'app/scripts/*.js',
-  'app/scripts/**/*.js',
-  'test/mock/**/*.js',
-  'test/spec/**/*.js',
   '.tmp/scripts/**/*.js',
   '.tmp/spec/**/*.js'
 ];
@@ -23,12 +19,6 @@ exclude = [];
 // test results reporter to use
 // possible values: dots || progress
 reporter = 'progress';
-
-// web server port
-port = 8080;
-
-// cli runner port
-runnerPort = 9100;
 
 // enable / disable colors in the output (reporters and logs)
 colors = true;
@@ -47,11 +37,10 @@ autoWatch = false;
 // - Opera
 // - Safari
 // - PhantomJS
-browsers = ['PhantomJS'];
-
-// hostname = process.env.IP;
-// port = process.env.PORT;
-// runnerPort = 0;
+browsers = process.env.IP !== undefined ? [] : ['PhantomJS'];
+hostname = process.env.IP || 'localhost';
+port = process.env.PORT || 8080;
+runnerPort = process.env.IP !== undefined ? 0 : 9100;
 
 // Continuous Integration mode
 // if true, it capture browsers, run tests and exit
