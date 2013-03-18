@@ -6,8 +6,12 @@ angular.module('khronosApp')
       controller: [
         '$scope'
         ($scope) ->
-          true
+          $scope.emitPause = -> $scope.$emit 'timer/pause'
       ]
       restrict: 'E'
-      template: '<div></div>'
+      template: '''
+        <div>
+          <button class=btn ng-click=emitPause()>Pause</button>
+        </div>
+      '''
   ]
