@@ -9,11 +9,12 @@ describe 'Controller: MainCtrl', () ->
   scope = {}
 
   # Initialize the controller and a mock scope
-  beforeEach inject ($controller) ->
-    scope = {}
+  beforeEach inject ($controller, $rootScope) ->
+    scope = $rootScope.$new()
     MainCtrl = $controller 'MainCtrl', {
       $scope: scope
     }
+    $rootScope.$digest()
 
   it 'should load', ->
     expect(true).toBe true

@@ -1,13 +1,13 @@
 'use strict'
 
-describe 'Directive: timerPlayButton', () ->
+describe 'Directive: timerStartButton', () ->
   # Private variables
   element = {}
 
   # Setup
   beforeEach module 'khronosApp'
   beforeEach inject ($rootScope, $compile) ->
-    template = angular.element '<timer-play-button></timer-play-button>'
+    template = angular.element '<timer-start-button></timer-start-button>'
     element = $compile(template)($rootScope.$new())
     $rootScope.$digest()
 
