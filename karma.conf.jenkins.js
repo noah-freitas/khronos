@@ -12,12 +12,12 @@ files = [
   JASMINE_ADAPTER,
   'app/components/angular/angular.js',
   'app/components/angular-mocks/angular-mocks.js',
-  'app/scripts/**/*.coffee',
-  'test/spec/**/*.coffee'
+  'tmp/scripts/**/*.js',
+  'tmp/spec/**/*.js'
 ];
 
 preprocessors = {
-  '**/*.coffee': 'coffee'
+  '**/tmp/scripts/**/*.js': 'coverage'
 };
 
 // list of files to exclude
@@ -28,12 +28,17 @@ exclude = [
 
 // test results reporter to use
 // possible values: 'dots', 'progress', 'junit'
-reporters = ['dots', 'junit'];
+reporters = ['dots', 'junit', 'coverage'];
 
 junitReporter = {
   outputFile: 'test-results.xml'
 };
 
+coverageReporter = {
+  type: 'cobertura',
+  dir: 'coverage/',
+  file: 'coverage.xml'
+};
 
 // web server port
 port = 9876;
